@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Sobre mí</title>
+</head>
+<body>
+  
+  <!-- Barra lateral -->
+  <aside class="sidebar">
+    <img src="john.jpg" alt="logo" class="imagen-circular">
+    <h3>Hidalgo Emmanuel Leandro</h3>
+    <p><strong>Carrera:</strong> Técnico</p>
+    <p><strong>Antigüedad:</strong> 1 año</p>
+    <p><strong>Edad:</strong> 18 años</p>
+    <p><strong>Inglés:</strong> Intermedio bajo</p>
+  </aside>
+
+  <header>
+    <div class="texto">
+      <h1>Mi portafolio</h1>
+    </div>
+    <button id="modo-toggle" class="modo-toggle">🌙</button>
+      <nav>
+    <div class="menu-rectangulo">
+      <ul class="menu-botones">
+        <li><a href="index.html" class="glitch-button" data-text="Sobre mí">Sobre mí</a></li>
+        <li><a href="Proyectos.html" class="glitch-button" data-text="Proyectos">Proyectos</a></li>
+        <li><a href="Habilidades.html" class="glitch-button" data-text="Habilidades">Habilidades</a></li>
+        <li><a href="Peliculas.html" class="glitch-button" data-text="Películas">Películas</a></li>
+        <li><a href="Contacto.html" class="glitch-button" data-text="Contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+  </header>
+
+  <!-- Botón para mostrar el menú lateral -->
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <!-- Menú de navegación -->
+
+
+
+  <!-- Contenido principal --> 
+  <div class="container">
+    <div class="yo-contenedor">
+      <img src="john.jpg" alt="Mi foto">    
+        <ul>
+          <p>Me llamo Emmanuel Hidalgo</p>
+          <p>estudiante de la Escuela Técnica N.º 6 "Chacabuco", especializada en la rama de Informática. Me apasiona la tecnología, el desarrollo de software y todo lo relacionado con el mundo digital. A lo largo de mi formación técnica he adquirido conocimientos en programación, redes, bases de datos y hardware, y sigo aprendiendo cada día para seguir creciendo profesionalmente. Estoy comprometido con seguir desarrollando habilidades tanto técnicas como personales, y me interesa especialmente el trabajo en equipo, la resolución de problemas y la creación de soluciones innovadoras a través de la tecnología.</p>
+        </ul>
+     </div>
+  </div>
+
+<script>
+  const toggleButton = document.getElementById('modo-toggle');
+  const body = document.body;
+
+  // Al cargar la página, aplicá el modo guardado
+  if (localStorage.getItem('modo') === 'oscuro') {
+    body.classList.add('dark-mode');
+    if (toggleButton) toggleButton.textContent = '☀️';
+  }
+
+  // Cambiar modo al hacer clic
+  if (toggleButton) {
+    toggleButton.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+
+      const modoActual = body.classList.contains('dark-mode') ? 'oscuro' : 'claro';
+      localStorage.setItem('modo', modoActual);
+
+      toggleButton.textContent = modoActual === 'oscuro' ? '☀️' : '🌙';
+    });
+  }
+</script>
+
+</body>
+<footer class="footer">
+  <p>Sígueme en:</p>
+  <a href="https://www.instagram.com/leomessi/"que target="_blank">
+    <i class="fab fa-instagram"></i> Instagram
+  </a>
+  <a href="https://github.com/tu_usuario" target="_blank">
+    <i class="fab fa-github"></i> GitHub
+  </a>
+</footer>
+
+  <!-- Script para mostrar/ocultar la barra lateral -->
+  <script>
+    function toggleMenu() {
+      const sidebar = document.querySelector('.sidebar');
+      sidebar.classList.toggle('show');
+    }
+  </script>
+
+</html>

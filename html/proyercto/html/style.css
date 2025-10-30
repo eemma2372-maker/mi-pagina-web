@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(34, 35, 87);
+}
+.titulo{
+    display: flex;
+    color:#ffffff;
+    font-size: 100px;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: flex-start; /* Alinea el texto al principio de la página */
+    height: 10vh; /* Asegura que ocupe toda la altura de la ventana */
+    padding-top: 20px; /* Espacio desde la parte superior */
+    
+}
+.imagenes1{
+    width: 20px;
+    height: auto;
+    margin-right: 20px;
+}
+.contenedor{
+    background-color:rgba(5, 5, 41, 0.75);
+    color: white;
+    padding: 20px 0;
+}
+.contenido-barra {
+    display: flex;
+    justify-content: center; /* Centra el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    gap: 20px;
+    font-size: 100px;
+}
