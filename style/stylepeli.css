@@ -1,0 +1,365 @@
+body {
+
+  display: flex; /*  Para mejor manejo de los elementos dentro */
+  flex-direction: column; /*  Para que el contenido se apile verticalmente */
+  margin: 0;
+  min-height: 100vh;
+  background-image: url('../images/mont.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.texto{
+  position: relative;
+  left: 40px;
+}
+
+/* Estilo para el botón de modo */
+.modo-toggle {
+  font-size: 20px;
+  background-color: whitesmoke;
+  color: black;
+  border: 0px;
+  border-radius: 20px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modo-toggle:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+  background-image: url('../images/montNo.jpg'); /* Reemplazá con tu imagen nocturna */
+  background-color: black;
+  color: white;
+  transition: background-image 0.5s ease, background-color 0.5s ease;
+}
+
+
+/* Modo oscuro */
+header .modo-toggle {
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+/* Hover */
+.modo-toggle:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Modo oscuro ajustes adicionales */
+body.dark-mode header {
+  background-color: #1e1e1e;
+  color: white;
+}
+.dark-mode th {
+  background-color: #111111;
+}
+
+body.dark-mode .modo-toggle {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+}
+
+body.dark-mode .footer {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+body.dark-mode .footer a {
+  color: white;
+}
+
+body.dark-mode .footer p {
+  color: white;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  background-image: url('../images/montNo.jpg'); /* opcional: quitar la imagen de fondo */
+  color: white;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+body.dark-mode .pelicula-card{
+background-color: #1e1e1e;
+  color: white;
+
+}
+body.dark-mode .yo-contenedor {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+body.dark-mode .container{
+  background-color: #1e1e1e;
+  color: white;
+}
+
+body.dark-mode .footer {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+body.dark-mode .menu-rectangulo {
+  background-color: #222;
+}
+
+body.dark-mode nav a {
+  color: white;
+}
+
+body.dark-mode nav a:hover {
+  color: orange;
+}
+
+body.dark-mode .sidebar {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+
+
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color:white;
+  color: black;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+  z-index: 999;
+}
+.sidebar.show {
+  left: 0;
+}
+.sidebar a {
+  padding: 8px 8px 8px 64px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+}
+.imagen-circular {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid black;
+}
+
+/* Botón menú hamburguesa */
+.menu-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+.menu-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Menú superior */
+.menu-rectangulo {
+
+  display: flex;
+  justify-content: center;
+  background-color: whitesmoke;
+}
+.menu-botones {
+  list-style: none;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1{
+
+  margin: 0;
+  font-size: 2rem;
+}
+
+nav ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav li{
+  position: relative;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav li:hover{
+  transform: translateY(-3px);
+}
+
+nav a{
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover{
+  color: orange;
+
+}
+.pelicula-card {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    width: 260px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.pelicula-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.6);
+}
+
+.pelicula-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    max-width: 300px;
+}
+
+/* Menú móvil y elementos adicionales */
+.menu {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 36px;
+    padding: 20px 40px;
+    border: 2px solid white;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.menu li a:hover {
+    background-color: #ffffff;
+    color: #141414;
+}
+
+.sidebar {
+    width: 100%;
+    left: -100%;
+}
+
+.sidebar.show {
+    left: 0;
+}
+
+.menu-toggle {
+    top: 10px;
+    left: 10px;
+}
+
+.card {
+    margin: 10px;
+    padding: 10px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1366px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .card-container {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        padding: 30px;
+    }
+}
+  
+.footer {
+  margin-top: auto; /* Esto empuja el footer al final cuando se usa flex-direction: column */
+  font-size: 15px;
+  border-radius: 12px;
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+.footer p {
+  margin-bottom: 10px; /* Espacio debajo del párrafo "Sígueme en:" */
+}
+
+.footer a {
+  color: black;
+  margin: 0 15px;
+  text-decoration: none;
+  padding: 5px 10px; /* Ajusta el padding para los enlaces */
+  display: inline-block; /* Para que el padding y margin funcionen correctamente */
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer a i {
+  margin-right: 8px;
+}
+    
+    
+    

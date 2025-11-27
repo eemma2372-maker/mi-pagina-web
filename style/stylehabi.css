@@ -1,0 +1,293 @@
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100vh;
+  background-image: url('../images/mont.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.texto {
+  position: relative;
+  left: 40px;
+}
+
+.menu-rectangulo {
+  display: flex;
+  justify-content: center;
+  background-color: whitesmoke;
+}
+
+.menu-botones {
+  list-style: none;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav li {
+  position: relative;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav li:hover {
+  transform: translateY(-3px);
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: orange;
+}
+
+
+/* Estilo para el botón de modo */
+.modo-toggle {
+  font-size: 20px;
+  background-color: whitesmoke;
+  color: black;
+  border: 0px;
+  border-radius: 20px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modo-toggle:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+  background-image: url('../images/montNo.jpg'); /* Reemplazá con tu imagen nocturna */
+  background-color: black;
+  color: white;
+  transition: background-image 0.5s ease, background-color 0.5s ease;
+}
+
+
+/* Modo oscuro */
+header .modo-toggle {
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+/* Hover */
+.modo-toggle:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Modo oscuro ajustes adicionales */
+body.dark-mode header {
+  background-color: #1e1e1e;
+  color: white;
+}
+.dark-mode th {
+  background-color: #111111;
+}
+
+body.dark-mode .modo-toggle {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+}
+
+body.dark-mode .footer {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+body.dark-mode .footer a {
+  color: white;
+}
+
+body.dark-mode .footer p {
+  color: white;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  background-image: url('../images/montNo.jpg'); /* opcional: quitar la imagen de fondo */
+  color: white;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.dark-mode .yo-contenedor {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+body.dark-mode .container{
+  background-color: #1e1e1e;
+  color: white;
+}
+
+body.dark-mode .footer {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+body.dark-mode .menu-rectangulo {
+  background-color: #222;
+}
+
+body.dark-mode nav a {
+  color: white;
+}
+
+body.dark-mode nav a:hover {
+  color: orange;
+}
+
+body.dark-mode .sidebar {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+
+.container {
+  display: flex;
+  max-width: 1000px;
+  margin: auto;
+  align-items: center;
+  border-radius: 12px;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.perfil {
+  width: 30%;
+  padding: 20px;
+  text-align: center;
+  border-right: 1px solid #ddd;
+}
+
+.perfil img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.perfil h2 {
+  color: #007acc;
+  margin: 10px 0;
+}
+
+.perfil p {
+  margin: 5px 0;
+}
+
+.habilidades {
+  width: 70%;
+  padding: 20px;
+}
+
+.habilidades h3 {
+  color: #007acc;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .perfil, .habilidades {
+    width: 100%;
+    border-right: none;
+  }
+
+  .menu-botones {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.footer {
+  margin-top: auto;
+  font-size: 15px;
+  border-radius: 12px;
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.footer p {
+  margin-bottom: 10px;
+}
+
+.footer a {
+  color: black;
+  margin: 0 15px;
+  text-decoration: none;
+  padding: 5px 10px;
+  display: inline-block;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer a i {
+  margin-right: 8px;
+}
